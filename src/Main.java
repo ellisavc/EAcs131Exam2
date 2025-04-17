@@ -19,6 +19,7 @@ class BinaryTreeDemo {
         printTree(root.right, indent + " ");
     }
 
+    //Print tree upside down
     static void printTreeFlipped(TreeNode root, String indent) {
         if (root == null)
             return;
