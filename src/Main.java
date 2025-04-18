@@ -15,8 +15,8 @@ class BinaryTreeDemo {
         if (root == null)
             return;
         System.out.println(indent + root.val);
-        printTree(root.left, indent + " ");
-        printTree(root.right, indent + " ");
+        printTree(root.left, indent + "| ");
+        printTree(root.right, indent + "| ");
     }
 
     //Print tree upside down
