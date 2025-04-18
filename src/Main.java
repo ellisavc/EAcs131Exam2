@@ -1,4 +1,4 @@
-class BinaryTreeDemo {
+class BinaryTree {
 
     // TreeNode class
     static class TreeNode {
@@ -17,15 +17,6 @@ class BinaryTreeDemo {
         System.out.println(indent + root.val);
         printTree(root.left, indent + "| ");
         printTree(root.right, indent + "| ");
-    }
-
-    //Print tree upside down
-    static void printTreeFlipped(TreeNode root, String indent) {
-        if (root == null)
-            return;
-        printTree(root.right, indent + " ");
-        printTree(root.left, indent + " ");
-        System.out.println(indent + root.val);
     }
 
     // Mirror (recursive)
@@ -52,6 +43,15 @@ class BinaryTreeDemo {
         root.right = null;
 
         return newRoot;
+    }
+
+    // Print tree visually upside down
+    static void printTreeUpsideDown(TreeNode root, String indent) {
+        if (root == null)
+            return;
+        printTree(root.right, indent + " ");
+        printTree(root.left, indent + " ");
+        System.out.println(indent + root.val);
     }
 
     // Build sample tree
@@ -82,7 +82,7 @@ class BinaryTreeDemo {
 
         TreeNode flipped2 = cloneTree(mirrored);
         System.out.println("\nUpside-down flip version 2:");
-        printTreeFlipped(flipped2, "");
+        printTreeUpsideDown(flipped2, "");
     }
 
     // Helper: deep copy of tree
