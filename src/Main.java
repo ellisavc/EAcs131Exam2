@@ -85,7 +85,7 @@ class BinaryTree {
         printTreeUpsideDown(flipped2, "");
     }
 
-    // Helper: deep copy of tree
+    // Clone a tree
     static TreeNode cloneTree(TreeNode root) {
         if (root == null)
             return null;
